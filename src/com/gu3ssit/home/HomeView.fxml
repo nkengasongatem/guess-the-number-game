@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackpane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gu3ssit.home.HomeViewController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="homeAnchorPane" prefHeight="529.0" prefWidth="377.0" style="-fx-background-color: #5682b5;" styleClass="mainFxmlClass">
+          <stylesheets>
+              <URL value="@homeview.css" />
+          </stylesheets>
+         <children>
+            <Circle fill="WHITE" layoutX="182.0" layoutY="127.0" radius="39.0" stroke="WHITE" strokeType="INSIDE" />
+            <Accordion layoutX="165.0" layoutY="147.0" />
+            <Label layoutX="110.0" layoutY="27.0" prefHeight="51.0" prefWidth="197.0" text="Gu3ss It" textFill="#fff7f7">
+               <font>
+                  <Font name="FontAwesome Regular" size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="98.0" fitWidth="121.0" layoutX="134.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/qmark.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="134.0" layoutY="494.0" prefHeight="21.0" prefWidth="134.0" text="© nkengasong 2019" textFill="WHITE">
+               <font>
+                  <Font name="Georgia" size="13.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="homePlay" buttonType="RAISED" layoutX="77.0" layoutY="265.0" onAction="#homePlay" prefHeight="40.0" prefWidth="224.0" style="-fx-background-color: #f91a4e;" text="Play" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="howToPlay" buttonType="RAISED" layoutX="77.0" layoutY="331.0" onAction="#howToPlay" prefHeight="40.0" prefWidth="224.0" style="-fx-background-color: #f91a4e;" text="How to play" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="setting" buttonType="RAISED" layoutX="77.0" layoutY="396.0" onAction="#setting" prefHeight="40.0" prefWidth="224.0" style="-fx-background-color: #f91a4e;" text="Setting" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <VBox fx:id="selectLevel" layoutX="45.0" layoutY="185.0" prefHeight="77.0" prefWidth="274.0" visible="false">
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label prefHeight="16.0" prefWidth="210.0" text="Select a level and start playing!" textAlignment="CENTER" textFill="WHITE" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="51.0" prefWidth="279.0">
+                     <children>
+                        <VBox prefHeight="51.0" prefWidth="125.0">
+                           <children>
+                              <JFXButton fx:id="level1" buttonType="RAISED" onAction="#playLevel1" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #fff;" text="Level 1">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </JFXButton>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="51.0" prefWidth="125.0">
+                           <children>
+                              <JFXButton fx:id="level2" buttonType="RAISED" onAction="#playLevel2" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #fff;" text="Level 2">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </JFXButton>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="51.0" prefWidth="125.0">
+                           <children>
+                              <JFXButton fx:id="level3" buttonType="RAISED" onAction="#playLevel3" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #fff;" text="Level 3">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </JFXButton>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="-1.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
