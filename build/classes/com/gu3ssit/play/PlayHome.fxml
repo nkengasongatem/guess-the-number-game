@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="playAnchorPane" prefHeight="529.0" prefWidth="377.0" style="-fx-background-color: #5682b5;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gu3ssit.play.PlayHomeController">
+    <children>
+      <Accordion layoutX="165.0" layoutY="147.0" />
+      <Label layoutX="134.0" layoutY="494.0" prefHeight="21.0" prefWidth="134.0" text="© nkengasong 2019" textFill="WHITE">
+         <font>
+            <Font name="Georgia" size="13.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="guess" buttonType="RAISED" layoutX="153.0" layoutY="445.0" onAction="#guess" onKeyTyped="#testGuessValue" prefHeight="20.0" prefWidth="78.0" style="-fx-background-color: #f91a4e;" text="Guess" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <HBox prefHeight="40.0" prefWidth="384.0" style="-fx-background-color: #5170b5;">
+         <children>
+            <VBox prefHeight="40.0" prefWidth="214.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <JFXButton ellipsisString="" prefHeight="36.0" prefWidth="64.0">
+                           <graphic>
+                              <JFXHamburger>
+                                 <padding>
+                                    <Insets left="15.0" top="-1.0" />
+                                 </padding>
+                              </JFXHamburger>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="8.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="40.0" prefWidth="180.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Label prefHeight="32.0" prefWidth="69.0" text="Gu3ss It" textFill="#fff7f7">
+                           <font>
+                              <Font name="Cantarell Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="8.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="195.0">
+               <children>
+                  <JFXButton fx:id="home" buttonType="RAISED" ellipsisString="" onAction="#goHome" text=" ">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="HOME" size="30" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="-8.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets right="5.0" />
+               </padding></VBox>
+         </children>
+      </HBox>
+      <Circle centerX="225.0" centerY="24.0" fill="WHITE" radius="8.0" stroke="WHITE" strokeType="INSIDE" />
+      <ImageView fitHeight="21.0" fitWidth="25.0" layoutX="215.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/qmark.png" />
+         </image>
+      </ImageView>
+      <HBox alignment="CENTER_LEFT" layoutX="17.0" layoutY="49.0" prefHeight="21.0" prefWidth="350.0">
+         <children>
+            <Label text="Level" textFill="WHITE">
+               <font>
+                  <Font name="Liberation Sans Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="levelLabel" text="1                                               Range [0 - 0050]" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Liberation Sans Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="6.0" />
+         </padding></HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="17.0" layoutY="70.0" prefHeight="21.0" prefWidth="350.0">
+         <children>
+            <Label text="Trials Left: " textFill="WHITE">
+               <font>
+                  <Font name="Liberation Sans Bold" size="14.0" />
+               </font>
+            </Label>
+            <Circle fx:id="trial1" fill="#29b563" radius="8.0" stroke="#29b563" strokeType="INSIDE">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Circle>
+            <Circle fx:id="trial2" fill="#29b563" radius="8.0" stroke="#29b563" strokeType="INSIDE">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Circle>
+            <Circle fx:id="trial3" fill="#29b563" radius="8.0" stroke="#29b563" strokeType="INSIDE">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Circle>
+            <Circle fx:id="trial4" fill="#29b563" radius="8.0" stroke="#29b563" strokeType="INSIDE">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Circle>
+            <Circle fx:id="trial5" fill="#29b563" radius="8.0" stroke="#29b563" strokeType="INSIDE">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Circle>
+            <Label fx:id="trialsLeft" text="1" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="150.0" top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Liberation Sans Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="6.0" />
+         </padding>
+      </HBox>
+      <Line endX="225.0" layoutX="135.0" layoutY="94.0" startX="-110.0" stroke="#d0cece" />
+      <ImageView fx:id="winImage" fitHeight="129.0" fitWidth="258.0" layoutX="72.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/congratulations-8.gif" />
+         </image>
+      </ImageView>
+      <VBox layoutX="25.0" layoutY="117.0">
+         <children>
+            <HBox fx:id="wrongGuess" prefHeight="100.0" prefWidth="336.0">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="165.0" style="-fx-background-color: #eee;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="25.0" prefWidth="161.0" text="Greater than" textAlignment="CENTER">
+                           <font>
+                              <Font name="Manjari Bold" size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="greater1" prefHeight="74.0" prefWidth="161.0" text="&gt;" textAlignment="CENTER">
+                           <font>
+                              <Font name="Manjari Bold" size="30.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" />
+                  <VBox prefHeight="100.0" prefWidth="165.0" style="-fx-background-color: #eee;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="25.0" prefWidth="161.0" text="Lesser than" textAlignment="CENTER">
+                           <font>
+                              <Font name="Manjari Bold" size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="lesser1" prefHeight="78.0" prefWidth="161.0" text="&lt;" textAlignment="CENTER">
+                           <font>
+                              <Font name="Manjari Bold" size="30.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="47.0" prefWidth="336.0">
+               <children>
+                  <VBox>
+                     <children>
+                        <Label text="Guess the number:" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="3.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="guessNumber" onAction="#guess" onKeyReleased="#testGuessValue" prefHeight="26.0" prefWidth="374.0" />
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="129.0" prefWidth="336.0">
+               <children>
+                  <VBox fx:id="userWins" alignment="TOP_CENTER" prefHeight="129.0" prefWidth="337.0" visible="false">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="32.0" prefWidth="337.0">
+                           <children>
+                              <Label fx:id="congratulation" text="GOOD JOB!" textFill="WHITE" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <JFXButton fx:id="replay" buttonType="RAISED" onAction="#replay" prefHeight="20.0" prefWidth="90.0" style="-fx-background-color: #f91a4e;" text="Replay" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="levelup" buttonType="RAISED" onAction="#levelup" prefHeight="20.0" prefWidth="90.0" style="-fx-background-color: #f91a4e;" text="Level up" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox fx:id="lostVBOX" layoutX="24.0" layoutY="282.0" visible="false">
+         <children>
+            <HBox alignment="CENTER" prefHeight="22.0" prefWidth="337.0">
+               <children>
+                  <Label fx:id="lostmessage" alignment="CENTER" prefHeight="16.0" prefWidth="330.0" textAlignment="CENTER" textFill="#ff0202">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="164.0" prefWidth="337.0">
+               <children>
+                  <VBox fx:id="userWins1" alignment="TOP_CENTER" prefHeight="108.0" prefWidth="337.0">
+                     <children>
+                        <ImageView fx:id="failedImage" fitHeight="125.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/failed.gif" />
+                           </image></ImageView>
+                        <HBox alignment="CENTER" prefHeight="102.0" prefWidth="337.0">
+                           <children>
+                              <JFXButton fx:id="tryagain" buttonType="RAISED" onAction="#tryagain" prefHeight="28.0" prefWidth="147.0" style="-fx-background-color: #f91a4e;" text="Play Again" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="settingAnchorPane" prefHeight="529.0" prefWidth="377.0" style="-fx-background-color: #5682b5;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="com.gu3ssit.setting.SettingController">
+    <children>
+      <Circle fill="WHITE" layoutX="182.0" layoutY="127.0" radius="39.0" stroke="WHITE" strokeType="INSIDE" />
+      <Accordion layoutX="165.0" layoutY="147.0" />
+      <Label layoutX="110.0" layoutY="27.0" prefHeight="51.0" prefWidth="197.0" text="Gu3ss It" textFill="#fff7f7">
+         <font>
+            <Font name="FontAwesome Regular" size="36.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="98.0" fitWidth="121.0" layoutX="134.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/qmark.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="134.0" layoutY="494.0" prefHeight="21.0" prefWidth="134.0" text="© nkengasong 2019" textFill="WHITE">
+         <font>
+            <Font name="Georgia" size="13.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="homeButton" buttonType="RAISED" layoutX="77.0" layoutY="265.0" onAction="#goHome" prefHeight="40.0" prefWidth="224.0" style="-fx-background-color: #f91a4e;" text="Go Home" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="30" />
+         </graphic>
+      </JFXButton>
+      <Label layoutX="68.0" layoutY="196.0" prefHeight="51.0" prefWidth="243.0" text="This page is still in construction" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

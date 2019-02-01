@@ -72,7 +72,10 @@ public class PlayHomeController implements Initializable {
                 maxNumber = 1001;
                 break;
         }
-        randomNumber = 12;
+        System.out.println("\n\n\n The random number is = " + randomNumber);
+        /*
+        randomNumber = 12; FOR TESTING PURPOSES
+         */
         winImage.setVisible(false);
         wrongGuess.setVisible(false);
 
@@ -141,8 +144,8 @@ public class PlayHomeController implements Initializable {
     private JFXButton home;
 
     @FXML
-    private ImageView winImage;    
-    
+    private ImageView winImage;
+
     @FXML
     private ImageView failedImage;
 
@@ -267,7 +270,7 @@ public class PlayHomeController implements Initializable {
                     trial1.setStroke(Color.WHITE);
                     break;
             }
-            
+
             guess.setVisible(false);
             userWins.setVisible(true);
             // check if user is at level 3
@@ -276,7 +279,7 @@ public class PlayHomeController implements Initializable {
             }
             // display congratulations message
             congratulation.setText("GOOD JOB! THE NUMBER WAS " + randomNumber);
-            
+
             // show congratulations gif
             winImage.setVisible(true);
         }
@@ -344,7 +347,7 @@ public class PlayHomeController implements Initializable {
         lesser1.setText("");
         greater1.setText("");
     }
-    
+
     public void levelUpNotification() {
         Image img = new Image("/com/gu3ssit/images/one.png");
         Notifications notificationBuilder = Notifications.create()
@@ -355,7 +358,7 @@ public class PlayHomeController implements Initializable {
                 .position(Pos.BOTTOM_RIGHT);
         notificationBuilder.showConfirm();
     }
-    
+
     public void invalidEntryNotification() {
         Image img = new Image("/com/gu3ssit/images/close-button.png");
         Notifications notificationBuilder = Notifications.create()
